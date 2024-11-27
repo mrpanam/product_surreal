@@ -1,0 +1,122 @@
+[
+    {
+        "name": "Banana",
+        "qty": 100,
+        "price": 5.45,
+        "category": {
+            "name": "Fruits"
+        }
+    },
+    {
+        "name": "Apple",
+        "qty": 50,
+        "price": 3.25,
+        "category": {
+            "name": "Fruits"
+        }
+    },
+    {
+        "name": "Mango",
+        "qty": 30,
+        "price": 6.99,
+        "category": {
+            "name": "Fruits"
+        }
+    },
+    {
+        "name": "Carrot",
+        "qty": 75,
+        "price": 2.10,
+        "category": {
+            "name": "Vegetables"
+        }
+    },
+    {
+        "name": "Broccoli",
+        "qty": 30,
+        "price": 4.99,
+        "category": {
+            "name": "Vegetables"
+        }
+    },
+    {
+        "name": "Spinach",
+        "qty": 45,
+        "price": 3.50,
+        "category": {
+            "name": "Vegetables"
+        }
+    },
+    {
+        "name": "Almonds",
+        "qty": 100,
+        "price": 8.99,
+        "category": {
+            "name": "Nuts"
+        }
+    },
+    {
+        "name": "Cashews",
+        "qty": 50,
+        "price": 7.99,
+        "category": {
+            "name": "Nuts"
+        }
+    },
+    {
+        "name": "Pistachios",
+        "qty": 30,
+        "price": 6.99,
+        "category": {
+            "name": "Nuts"
+        }
+    },
+    {
+        "name": "Chicken",
+        "qty": 40,
+        "price": 12.99,
+        "category": {
+            "name": "Meats"
+        }
+    },
+    {
+        "name": "Beef",
+        "qty": 25,
+        "price": 15.99,
+        "category": {
+            "name": "Meats"
+        }
+    },
+    {
+        "name": "Pork",
+        "qty": 30,
+        "price": 11.50,
+        "category": {
+            "name": "Meats"
+        }
+    },
+    {
+        "name": "Milk",
+        "qty": 100,
+        "price": 1.50,
+        "category": {
+            "name": "Dairy"
+        }
+    },
+    {
+        "name": "Gruyere",
+        "qty": 50,
+        "price": 3.00,
+        "category": {
+            "name": "Dairy"
+        }
+    },
+    {
+        "name": "Yogurt",
+        "qty": 75,
+        "price": 2.00,
+        "category": {
+            "name": "Dairy"
+        }
+    }
+]
