@@ -1,5 +1,6 @@
 mod connect;
 mod helper;
+mod init;
 mod model;
 mod read;
 mod select;
@@ -9,6 +10,8 @@ async fn main() -> Result<(), surrealdb::Error> {
     println!("Hello, world!");
 
     let db = connect::connect().await?;
+
+    init::init_db(&db).await?;
 
     //let (products, categories) = read::read_json();
 
