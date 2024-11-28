@@ -1,8 +1,7 @@
 use crate::model::{Category, Product, ProductInsert};
 use std::collections::{HashMap, HashSet};
 use surrealdb::engine::any::Any;
-use surrealdb::sql::Id;
-use surrealdb::sql::Thing;
+
 use surrealdb::{Error, Surreal};
 
 pub async fn create_products(products: Vec<Product>, db: &Surreal<Any>) -> Result<(), Error> {
@@ -30,17 +29,17 @@ pub async fn create_categories(
 }
 
 pub async fn create_product(db: &Surreal<Any>) -> Result<(), Error> {
-    let category_key: Option<Category> = db.select(("category", "Nuts")).await?.unwrap();
+    let category_key: Option<Category> = db.select(("category", "Nuts")).await?;
 
     println!("Category key: {:#?}", category_key);
 
-    let _: Option<Product> = db
+    let _: Option<ProductInsert> = db
         .create("product")
         .content(ProductInsert {
-            name: "Banana".to_string(),
+            name: "Coconut".to_string(),
             qty: 100,
             price: 5.45,
-            category: category_key.expect("Category not found").id,
+            category: category_key.expect("Category not found").id.unwrap(),
         })
         .await?;
 

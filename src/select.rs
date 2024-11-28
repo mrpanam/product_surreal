@@ -1,15 +1,16 @@
-use crate::model::{Category, Record};
+use crate::model::Category;
 use surrealdb::engine::any::Any;
 
-use surrealdb::sql::Thing;
 use surrealdb::{Error, Surreal};
 
-pub async fn select_category(db: &Surreal<Any>) -> Result<Thing, Error> {
-    let category: Thing = db.select(("category", "Fruits")).await?.unwrap();
+pub async fn select_category(db: &Surreal<Any>) -> Result<Category, Error> {
+    let category: Option<Category> = db.select(("category", "Fruits")).await?;
 
-    // Convert Option to Result
-
-    println!("Category: {:#?}", category);
-
-    Ok(category)
+    match category {
+        Some(cat) => {
+            println!("Category: {:#?}", cat);
+            Ok(cat)
+        }
+        None => Err(Error::Db(surrealdb::error::Db::NoRecordFound)),
+    }
 }

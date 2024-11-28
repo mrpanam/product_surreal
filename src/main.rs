@@ -11,13 +11,13 @@ async fn main() -> Result<(), surrealdb::Error> {
 
     let db = connect::connect().await?;
 
-    init::init_db(&db).await?;
+    //init::init_db(&db).await?;
 
-    //let (products, categories) = read::read_json();
+    let (products, categories) = read::read_json();
 
     //helper::create_categories(categories, &db).await?;
 
-    //select::select_category(&db).await?;
+    select::select_category(&db).await?;
 
     helper::create_product(&db).await?;
 
