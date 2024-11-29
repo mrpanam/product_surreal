@@ -1,6 +1,5 @@
 use serde::{Deserialize, Serialize};
-use surrealdb::sql::Thing;
-use surrealdb::{Error, RecordId};
+use surrealdb::RecordId;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Product {

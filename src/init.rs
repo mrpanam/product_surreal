@@ -3,7 +3,7 @@ use surrealdb::engine::any::Any;
 use surrealdb::{Error, Surreal};
 
 pub async fn init_db(db: &Surreal<Any>) -> Result<(), Error> {
-    /*db.query(
+    db.query(
         "DEFINE TABLE category SCHEMALESS;
         DEFINE FIELD name ON category TYPE string;
         DEFINE TABLE product SCHEMALESS;
@@ -12,7 +12,7 @@ pub async fn init_db(db: &Surreal<Any>) -> Result<(), Error> {
         DEFINE FIELD qty ON product TYPE int;
         DEFINE FIELD category ON product TYPE record <category>;",
     )
-    .await?;*/
+    .await?;
 
     println!("Tables created successfully!");
 
