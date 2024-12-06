@@ -1,4 +1,5 @@
 use crate::model::{Category, Product, ProductInsert};
+use chrono;
 use std::collections::HashSet;
 use surrealdb::engine::any::Any;
 
@@ -16,6 +17,7 @@ pub async fn create_products(products: Vec<Product>, db: &Surreal<Any>) -> Resul
                 qty: product.qty,
                 price: product.price,
                 category: category_key.expect("Category not found").id.unwrap(),
+                date: surrealdb::sql::Datetime::from(chrono::Utc::now()),
             })
             .await?;
     }

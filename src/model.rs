@@ -1,4 +1,5 @@
 use serde::{Deserialize, Serialize};
+use surrealdb::sql::Datetime;
 use surrealdb::RecordId;
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -20,4 +21,5 @@ pub struct ProductInsert {
     pub qty: i64,
     pub price: f64,
     pub category: RecordId,
+    pub date: Datetime,
 }

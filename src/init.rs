@@ -2,7 +2,7 @@ use surrealdb::engine::any::Any;
 
 use surrealdb::{Error, Surreal};
 
-pub async fn init_db(db: &Surreal<Any>) -> Result<(), Error> {
+pub async fn _init_db(db: &Surreal<Any>) -> Result<(), Error> {
     db.query(
         "DEFINE TABLE category SCHEMALESS;
         DEFINE FIELD name ON category TYPE string;
